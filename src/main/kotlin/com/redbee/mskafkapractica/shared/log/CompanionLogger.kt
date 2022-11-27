@@ -1,4 +1,4 @@
-package com.redbee.mskafkapractica.shared.other.util.log
+package com.redbee.mskafkapractica.shared.log
 
 import arrow.core.Either
 import org.slf4j.Logger

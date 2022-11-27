@@ -1,6 +1,18 @@
 spring:
   application:
     name: ms-kafka-practica
+  kafka:
+    bootstrap-servers: "localhost:9092"
+    listener:
+      ack-mode: "manual_immediate"
+      missing-topics-fatal: false
+    consumer:
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
   cloud:
     config:
       import-check:
@@ -11,8 +23,4 @@ spring:
     default-property-inclusion: NON_NULL
     deserialization:
       ADJUST_DATES_TO_CONTEXT_TIME_ZONE: false
-springdoc:
-  api-docs:
-    path: ${APP_PATH}/swagger-ui/api-docs
-  swagger-ui:
-    path: ${APP_PATH}/index.html
+

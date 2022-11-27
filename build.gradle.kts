@@ -36,7 +36,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.kafka:spring-kafka:2.8.4")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
+
 
     // Spring-Cloud
     implementation("org.springframework.cloud:spring-cloud-starter-config")
