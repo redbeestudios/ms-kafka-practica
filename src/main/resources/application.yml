@@ -2,7 +2,7 @@ spring:
   application:
     name: ms-kafka-practica
   kafka:
-    bootstrap-servers: "localhost:9092"
+    bootstrap-servers: localhost:9092
     listener:
       ack-mode: "manual_immediate"
       missing-topics-fatal: false
@@ -23,4 +23,9 @@ spring:
     default-property-inclusion: NON_NULL
     deserialization:
       ADJUST_DATES_TO_CONTEXT_TIME_ZONE: false
+  data:
+    mongodb:
+      uri: "mongodb://merchants:merchants@localhost:27017/db-merchants"
+      auto-index-creation: true
+      uuid-representation: standard
 

@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component
 
 @Component
 class CreateOperationUseCase(
-    private val createOperationPortOut: CreateOperationPortOut
+    private val operationRepository: CreateOperationPortOut
 ) : CreateOperationPortIn {
 
-    override fun execute(operation: Operation): Operation {
-        TODO("Not yet implemented")
-    }
+    override fun execute(operation: Operation) =
+        operationRepository.execute(operation)
+            .log { info("Operation created") }
 
     companion object : CompanionLogger()
 }

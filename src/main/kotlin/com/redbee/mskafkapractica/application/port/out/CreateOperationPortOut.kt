@@ -1,3 +1,7 @@
 package com.redbee.mskafkapractica.application.port.out
 
-interface CreateOperationPortOut
+import com.redbee.mskafkapractica.domain.Operation
+
+interface CreateOperationPortOut {
+    fun execute(operation: Operation): Operation
+}
