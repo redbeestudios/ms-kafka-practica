@@ -7,6 +7,6 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class Operation(
     @Id
     val id: Int,
-    val totalAmount: String,
+    val amount: String,
     val name: String
 )
